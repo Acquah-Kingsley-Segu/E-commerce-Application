@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## How to run project
 
 In the project directory:
 - Change directory into **ecommerce-app-ui** by typing: `cd ecommerce-app-ui`
