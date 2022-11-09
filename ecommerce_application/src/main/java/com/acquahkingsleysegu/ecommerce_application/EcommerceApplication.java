@@ -1,2 +1,11 @@
-package com.acquahkingsleysegu.ecommerce_application;public class EcommerceApplication {
+package com.acquahkingsleysegu.ecommerce_application;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class EcommerceApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(EcommerceApplication.class, args);
+    }
 }
