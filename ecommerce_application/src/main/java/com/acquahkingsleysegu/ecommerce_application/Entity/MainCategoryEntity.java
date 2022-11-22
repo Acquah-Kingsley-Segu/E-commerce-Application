@@ -3,21 +3,18 @@ package com.acquahkingsleysegu.ecommerce_application.Entity;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 
 @Entity
 @Table(name = "main_category")
 @Data
-public class CategoryEntity {
+public class MainCategoryEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "main_id")
     private Long id;
-
-    @OneToMany(mappedBy = "mainCategory", fetch=FetchType.LAZY, cascade = CascadeType.ALL)
-    private Set<SubCategory> subCategories = new HashSet<>();
-
     String name;
     String description;
+
+    @OneToMany(targetEntity = SubCategoryEntity.class, mappedBy = "mainCategoryID", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<SubCategoryEntity> subCategoryEntities;
 }
