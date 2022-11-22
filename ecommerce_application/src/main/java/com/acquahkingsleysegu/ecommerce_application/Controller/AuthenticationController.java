@@ -1,7 +1,9 @@
 package com.acquahkingsleysegu.ecommerce_application.Controller;
 
 import com.acquahkingsleysegu.ecommerce_application.Entity.UserEntity;
+import com.acquahkingsleysegu.ecommerce_application.Model.MainCategoryModel;
 import com.acquahkingsleysegu.ecommerce_application.Model.UserEntityModel;
+import com.acquahkingsleysegu.ecommerce_application.Service.MainCategoryService;
 import com.acquahkingsleysegu.ecommerce_application.Service.UserEntityService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +18,6 @@ public class AuthenticationController {
     public AuthenticationController(UserEntityService userService) {
         this.userService = userService;
     }
-
     @PostMapping("/create_account")
     public ResponseEntity<UserEntityModel> createUser(@RequestBody UserEntityModel userInfo){
         this.userService.createUser(userInfo);
